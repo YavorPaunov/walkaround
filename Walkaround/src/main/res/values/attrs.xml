@@ -1,0 +1,31 @@
+<resources>
+
+    <!--
+         Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels.
+    -->
+    <declare-styleable name="DirectionsListView">
+        <attr name="line" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="buttonBarStyle" format="reference" />
+        <attr name="buttonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DirectionsLine">
+        <attr name="lineThickness" format="dimension" />
+        <attr name="lineColor" format="color" />
+
+        <attr name="dotRadius" format="dimension" />
+        <attr name="dotFillColor" format="color" />
+        <attr name="dotStrokeWidth" format="dimension" />
+        <attr name="dotStrokeColor" format="color" />
+
+        <attr name="isFirst" format="boolean" />
+        <attr name="isLast" format="boolean" />
+    </declare-styleable>
+
+</resources>

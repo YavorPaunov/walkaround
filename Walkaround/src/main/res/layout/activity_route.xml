@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<walk.around.layouts.MapSlidingPaneLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_route_fragments"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:descendantFocusability="beforeDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <fragment
+        android:id="@+id/fragment_list"
+        android:name="walk.around.fragments.RouteListFragment"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout="@layout/fragment_route_list"/>
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/sliding_up_pane"
+        android:layout_width="600dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent">
+        <fragment
+            android:id="@+id/fragment_map"
+            android:name="walk.around.fragments.RouteMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_route_map" />
+        <fragment
+            android:id="@+id/fragment_generate"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:name="walk.around.fragments.GenerateFragment"
+            tools:layout="@layout/fragment_route_generate"/>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</walk.around.layouts.MapSlidingPaneLayout>

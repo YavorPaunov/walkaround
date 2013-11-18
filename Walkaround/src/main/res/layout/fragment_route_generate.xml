@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2013. All Rights Reserved
+  ~ Written by Yavor Paunov
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ViewSwitcher
+
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        android:id="@+id/switcher_route_category"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <LinearLayout
+            android:id="@+id/category_buttons_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/icon_drinks"
+                style="@style/Walkaround.ImageButton.CategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icon_small_drinks" />
+
+
+            <ImageButton
+                android:id="@+id/icon_shopping"
+                style="@style/Walkaround.ImageButton.CategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icon_small_shopping" />
+
+
+            <ImageButton
+                android:id="@+id/icon_walking"
+                style="@style/Walkaround.ImageButton.CategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icon_small_walking" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:clickable="false"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:id="@+id/route_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/image_route_category"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+
+            <TextView
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="20dp"
+                android:layout_toRightOf="@id/image_route_category"
+                android:layout_alignTop="@id/image_route_category"
+                android:id="@+id/text_route_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="20dp"
+                android:layout_toRightOf="@id/image_route_category"
+                android:id="@+id/text_route_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/image_route_category" />
+
+            <TextView
+                android:text="@string/getting_your_location"
+                android:id="@+id/text_num_venues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+    </ViewSwitcher>
+
+    <ViewSwitcher
+        android:id="@+id/switcher_route_options"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateFirstView="false"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out">
+
+        <RelativeLayout
+            android:id="@+id/switcher_item_options"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/stub1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/button_divider" />
+
+            <Button
+                android:id="@+id/button_limit_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/stub1"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_toLeftOf="@+id/stub2"
+                android:background="@drawable/abs__list_selector_holo_light"
+                android:text="@string/limit_by_distance"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/stub2"
+                style="@style/ButtonVerticalDivider"
+                android:layout_width="1px"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/button_limit_distance"
+                android:layout_alignTop="@id/button_limit_distance"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button_limit_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/stub1"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/stub2"
+                android:background="@drawable/abs__list_selector_holo_light"
+                android:text="@string/limit_by_time"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_limit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/seek_limit"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <SeekBar
+                android:id="@+id/seek_limit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:max="60"
+                android:progress="30" />
+
+            <View
+                android:id="@+id/stub3"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_above="@+id/button_create_route"
+                android:background="@color/button_divider" />
+
+            <Button
+                android:id="@+id/button_create_route"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/abs__list_selector_holo_light"
+                android:minHeight="60dp"
+                android:text="GENERATE" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/switcher_item_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="20dp"></ProgressBar>
+
+        </RelativeLayout>
+
+    </ViewSwitcher>
+</LinearLayout>

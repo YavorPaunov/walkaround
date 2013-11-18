@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:walk_around="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res/walk.around"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false" >
+
+        <walk.around.view.DirectionsLine
+            android:id="@+id/directions_line"
+            android:layout_width="@dimen/directions_dots_width"
+            android:layout_height="wrap_content"
+            app:dotSpacing="@dimen/directions_dots_spacing"
+            app:isFirst="true"
+            app:isLast="false"
+            app:largeDotFillColor="@color/directions_dot_fill"
+            app:largeDotRadius="3dp"
+            app:largeDotStrokeColor="@color/directions_dot_stroke"
+            app:largeDotStrokeWidth="1dp"
+            app:smallDotFillColor="@color/directions_dot_fill"
+            app:smallDotRadius="5dp"
+            app:smallDotStrokeColor="@color/directions_dot_stroke"
+            app:smallDotStrokeWidth="@dimen/directions_small_dot_stroke" >
+        </walk.around.view.DirectionsLine>
+
+        <Button
+            android:id="@+id/venue_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/vertical_line" />
+
+        <TextView
+            android:id="@+id/venue_list_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignBottom="@+id/vertical_line"
+            android:layout_below="@+id/venue_list_name"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/vertical_line"
+            android:gravity="center_vertical"
+            android:text="999m" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false" >
+
+        <Button
+            android:id="@+id/venue_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/vertical_line" />
+
+        <TextView
+            android:id="@+id/venue_list_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignBottom="@+id/vertical_line"
+            android:layout_below="@+id/venue_list_name"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/vertical_line"
+            android:gravity="center_vertical"
+            android:text="999m" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false" >
+
+        <Button
+            android:id="@+id/venue_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/vertical_line" />
+    </RelativeLayout>
+
+</LinearLayout>

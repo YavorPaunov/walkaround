@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<walk.around.view.RouteLegView
+    android:focusable="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <Button
+        android:gravity="left"
+        android:id="@+id/text_name"
+        style="@style/TextAppearance.Sherlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/directions_group_vertical_padding"
+        android:paddingTop="@dimen/directions_group_vertical_padding"
+        android:text="Big"
+        android:background="@drawable/abs__list_selector_holo_light"
+        android:textStyle="bold"/>
+
+    <Button
+        android:gravity="left"
+        android:id="@+id/text_distance"
+        style="@style/TextAppearance.Sherlock.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_name"
+        android:paddingBottom="@dimen/directions_group_vertical_padding"
+        android:paddingTop="@dimen/directions_group_vertical_padding"
+        android:background="@drawable/abs__list_selector_holo_light"
+        android:text="Small"/>
+
+</walk.around.view.RouteLegView>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true">
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map_view"
+        layout_height="match_parent"
+        layout_width="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+        <!--android:text="@string/my_location"-->
+    <AutoCompleteTextView
+        android:visibility="gone"
+        android:id="@+id/search_location"
+        android:hint="@string/my_location"
+        android:background="@drawable/location_search_background"
+        android:singleLine="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:minHeight="56dp"/>
+
+</FrameLayout>

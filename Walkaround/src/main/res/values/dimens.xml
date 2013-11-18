@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="directions_child_vertical_padding">14dp</dimen>
+    <dimen name="directions_group_vertical_padding">18dp</dimen>
+
+    <dimen name="directions_left_padding">44dp</dimen>
+    <dimen name="directions_right_padding">16dp</dimen>
+
+    <dimen name="directions_dots_width">16dp</dimen>
+    <dimen name="directions_dots_spacing">18dp</dimen>
+    
+    <dimen name="directions_large_dot_radius">6dp</dimen>
+    <dimen name="directions_small_dot_radius">4dp</dimen>
+
+    <dimen name="directions_large_dot_stroke">4dp</dimen>
+    <dimen name="directions_small_dot_stroke">6dp</dimen>
+
+    <dimen name="directions_line_thickness">3dp</dimen>
+</resources>
